@@ -1,0 +1,207 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+nav {
+  background-color: var(--card-bg);
+  padding: 15px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+nav h2 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Cards & Layout */
+.expert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-color);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.card p {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+}
+
+/* Forms & Inputs */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Slots */
+.slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.slot-btn {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.slot-btn.selected {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.slot-btn:hover:not(.selected) {
+  background: #f9fafb;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-Confirmed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-Cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Error message */
+.error {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
